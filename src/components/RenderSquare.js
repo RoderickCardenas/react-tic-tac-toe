@@ -1,7 +1,14 @@
-const RenderSquare = () => {
+import { useState, useEffect } from "react";
+
+const RenderSquare = (props) => {
+
+  const [originalValue, setValue] = useState(null)
+
+  useEffect(() => setValue(props.value),[props.value])
+
   return (
-    <button className="square">
-      {/* TODO */}
+    <button className="square" onClick={() => setValue("X")}>
+      {originalValue}
     </button>
   );
 }

@@ -1,6 +1,9 @@
 import RenderSquare from "../components/RenderSquare";
+import { useState } from "react";
 
 const Board = () => {
+
+  const [squares, setSquares] = useState(Array(9).fill(null))
 
   const status = 'Next player: X';
 
@@ -9,19 +12,19 @@ const Board = () => {
     <>
         <div className="status">{status}</div>
         <div className="board-row">
-          <RenderSquare number={0}/>
-          <RenderSquare number={1}/>
-          <RenderSquare number={2}/>
+          <RenderSquare value={squares[0]}/>
+          <RenderSquare value={squares[1]}/>
+          <RenderSquare value={squares[2]}/>
         </div>
         <div className="board-row">
-          <RenderSquare number={3}/>
-          <RenderSquare number={4}/>
-          <RenderSquare number={5}/>
+          <RenderSquare value={squares[3]}/>
+          <RenderSquare value={squares[4]}/>
+          <RenderSquare value={squares[5]}/>
         </div>
         <div className="board-row">
-          <RenderSquare number={6}/>
-          <RenderSquare number={7}/>
-          <RenderSquare number={8}/>
+          <RenderSquare value={squares[6]}/>
+          <RenderSquare value={squares[7]}/>
+          <RenderSquare value={squares[8]}/>
         </div>
     </>
   )
