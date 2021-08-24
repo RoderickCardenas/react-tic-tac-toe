@@ -1,6 +1,9 @@
+import GameBoard from "./containers/GameBoard";
+
 const App = () => {
   return (
-    <div className="App">
+    <div className="game">
+      <GameBoard />
     </div>
   );
 }
